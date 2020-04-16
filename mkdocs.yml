@@ -1,0 +1,26 @@
+
+# Project Information
+site_name: LBNL Science IT Docs
+site_description: concierge information technology services for science
+site_author: Shawfeng Dong
+site_url: https://lbnl-science-it.github.io/docs/
+
+# Repository
+repo_name: GitHub/lbnl-science-it/docs
+repo_url: https://github.com/lbnl-science-it/docs
+edit_uri: blob/master/docs/
+
+# Copyright
+copyright: 'Copyright &copy; 2020 Science IT Consultants'
+
+# Configuration
+theme:
+  name: material
+
+# Page tree
+nav:
+    - Home: index.md
+    - "Consulting & Training": consult.md
+    - "High-Performance Computing": hpc.md
+    - "Data Management & Storage": data.md
+    - "Science General Support": support.md
