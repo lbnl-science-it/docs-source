@@ -6,8 +6,8 @@ site_author: Shawfeng Dong
 site_url: https://lbnl-science-it.github.io/docs/
 
 # Repository
-repo_name: GitHub/lbnl-science-it/docs
-repo_url: https://github.com/lbnl-science-it/docs
+repo_name: GitHub/lbnl-science-it/docs-source
+repo_url: https://github.com/lbnl-science-it/docs-source
 edit_uri: blob/master/docs/
 
 # Copyright
