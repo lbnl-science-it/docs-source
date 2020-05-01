@@ -43,7 +43,7 @@ Now you have everything necessary to maintain the docs site. Here is a typical w
 4. Move to the `site` folder (`cd site`), and push the updated static site to GitHub
 5. Visit [https://lbnl-science-it.github.io/docs/](https://lbnl-science-it.github.io/docs/) and check the updated site
 
-At the some point in the future, we'll set up CI/CD to simplify the process. We'll only need to update the `docs-source` repo; updating the static site will be automated. Until then, please follow the above workflow. Hope it's not too tedious. 
+At some point in the future, we'll set up CI/CD to simplify the process. We'll only need to update the `docs-source` repo; updating the static site will be automated. Until then, please follow the above workflow. Hope it's not too tedious. 
 
 ## Similar Docs Sites
 
