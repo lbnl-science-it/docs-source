@@ -48,3 +48,4 @@ At some point in the future, we'll set up CI/CD to simplify the process. We'll o
 ## Similar Docs Sites
 
 * [NERSC Documentation](https://docs.nersc.gov/)
+* [UCB HPC Docs](https://docs-research-it.berkeley.edu/services/high-performance-computing/), which is also hosted on GitHub Page, but built with a different static generator, [Jekyll](https://jekyllrb.com/)
