@@ -40,7 +40,7 @@ Now you have everything necessary to maintain the docs site. Here is a typical w
 1. Update the `lbnl-science-it-docs-source` repo on your computer, e.g., modifying the layout or adding pages (for details, please refer to [MkDocs](https://www.mkdocs.org/))
 2. Push the changes to GitHub
 3. Build the static site on your computer, by running `mkdocs build`. This will update the `site` folder, which is a symbolic link to the `lbnl-science-it-docs` repo
-4. Move to the `site` folder (`cd site`), and push the updated static site to GitHub
+4. Go to the `site` folder (`cd site`), and push the updated static site to GitHub
 5. Visit [https://lbnl-science-it.github.io/docs/](https://lbnl-science-it.github.io/docs/) and check the updated site
 
 At some point in the future, we'll set up CI/CD to simplify the process. We'll only need to update the `docs-source` repo; updating the static site will be automated. Until then, please follow the above workflow. Hope it's not too tedious. 
