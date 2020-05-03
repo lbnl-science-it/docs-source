@@ -24,3 +24,5 @@ nav:
     - "High-Performance Computing": hpc.md
     - "Data Management & Storage": data.md
     - "Science General Support": support.md
+    - Tutorials:
+        - "SpaRC on Laurencium": sparc_on_laurencium.md
