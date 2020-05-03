@@ -26,3 +26,4 @@ nav:
     - "Science General Support": support.md
     - Tutorials:
         - "SpaRC on Laurencium": sparc_on_laurencium.md
+        - "SpaRC on GCP": sparc_on_gcp.md
