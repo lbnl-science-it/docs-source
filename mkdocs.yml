@@ -25,5 +25,5 @@ nav:
     - "Data Management & Storage": data.md
     - "Science General Support": support.md
     - Tutorials:
-        - "SpaRC on Laurencium": sparc_on_laurencium.md
+        - "SpaRC on Lawrencium": sparc_on_lawrencium.md
         - "SpaRC on GCP": sparc_on_gcp.md

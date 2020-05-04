@@ -1,18 +1,18 @@
-# Running SpaRC on Laurencium
+# Running SpaRC on Lawrencium
 
-SpaRC is an [Apache Spark-based scalable sequence clustering application](https://www.biorxiv.org/content/10.1101/246496v1). SpaRC has been running successfully on [AWS EMR](https://aws.amazon.com/emr/), as well as on the [Bridges](https://www.psc.edu/bridges) supercomputer at PSC. In this tutorial, I describe how to run SpaRC on [Laurencium](https://sites.google.com/a/lbl.gov/high-performance-computing-services-group/lbnl-supercluster/lawrencium).
+SpaRC is an [Apache Spark-based scalable genomic sequence clustering application](#references). SpaRC has been running successfully on [AWS EMR](https://aws.amazon.com/emr/), as well as on the [Bridges](https://www.psc.edu/bridges) supercomputer at PSC. In this tutorial, I describe how to run SpaRC on [Lawrencium](https://sites.google.com/a/lbl.gov/high-performance-computing-services-group/lbnl-supercluster/lawrencium).
 
-## Spark On Demand on Laurencium
+## Spark On Demand on Lawrencium
 
-Users can run Spark jobs on Laurencium in [Spark On Demand (SOD)](https://sites.google.com/a/lbl.gov/high-performance-computing-services-group/getting-started/faq) fashion, in which a standalone Spark cluster will be created *on demand* in a Slurm job. Note that the Spark cluster will be running in [standalone mode](https://spark.apache.org/docs/latest/spark-standalone.html), so there will be no YARN cluster manager, nor HDFS. In lieu of HDFS, we'll use Lustre scratch for storage.
+Users can run Spark jobs on Lawrencium in [Spark On Demand (SOD)](https://sites.google.com/a/lbl.gov/high-performance-computing-services-group/getting-started/faq) fashion, in which a standalone Spark cluster will be created *on demand* in a Slurm job. Note that the Spark cluster will be running in [standalone mode](https://spark.apache.org/docs/latest/spark-standalone.html), so there will be no YARN cluster manager, nor HDFS. In lieu of HDFS, we'll use Lustre scratch for storage.
 
-As of this writing, there is only Spark **2.1.0** available on Laurencium. We may install a more up-to-date version in the near future.
+As of this writing, there is only Spark **2.1.0** available on Lawrencium. We may install a more up-to-date version in the near future.
 
 ## Building SpaRC
 
 You'll build SpaRC against Spark 2.1.0. The source code of SpaRC is hosted on Bitbucket at <https://bitbucket.org/LizhenShi/sparc>. I don't have write access to the repo, so I imported it to GitHub, at <https://github.com/shawfdong/sparc>. I've added a new file `build.sbt.spark2.1.0` to the GitHub repo, which, as the name suggests, will be used to build SpaRC against Spark 2.1.0.
 
-Note that you can't build SpaRC on the login nodes of Laurencium, because rsync (which is required by sbt) is disabled there. You'll have to use the data transfer node `lrc-xfer.lbl.gov`:
+Note that you can't build SpaRC on the login nodes of Lawrencium, because rsync (which is required by sbt) is disabled there. You'll have to use the data transfer node `lrc-xfer.lbl.gov`:
 
 ```shell
 $ ssh lrc-xfer.lbl.gov
@@ -66,11 +66,11 @@ $ head -2 sample.seq
 
 Now you can exit from `lrc-xfer.lbl.gov`.
 
-*Alternatively*, you could build SpaRC on your local computer, then upload the assembled fat jar file to your Lustre scratch space on Laurencium.
+*Alternatively*, you could build SpaRC on your local computer, then upload the assembled fat jar file to your Lustre scratch space on Lawrencium.
 
 ## Running SpaRC interactively
 
-SSH to a Laurencium login node:
+SSH to a Lawrencium login node:
 
 ```shell
 $ ssh lrc-login.lbl.gov
@@ -237,3 +237,8 @@ sbatch sparc.slurm
 
 1. Presumably, there is a switch `-i` to `spark-start` that would enable communications over the IPoIB network. But it doesn't work!
 2. Spark 2.1.0 is a bit old.
+
+## References
+
+1. <https://academic.oup.com/bioinformatics/article/35/5/760/5078476>
+2. <https://peerj.com/articles/8966/>
