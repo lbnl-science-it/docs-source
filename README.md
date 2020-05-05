@@ -1,6 +1,6 @@
 # How to set up a MkDocs site
 
-We are building a new docs site for LBNL Science IT. At the pilot phase, the site is temporarily hosted on GitHub Page at  [https://lbnl-science-it.github.io/docs/](https://lbnl-science-it.github.io/docs/). For production, we may host the site on an LBNL server.
+We are building a new docs site for LBNL Science IT. At the pilot phase, the site is temporarily hosted on GitHub Pages at  [https://lbnl-science-it.github.io/docs/](https://lbnl-science-it.github.io/docs/). For production, we may host the site on an LBNL server.
 
 We use the static site generator [MkDocs](https://www.mkdocs.org/) along with the theme [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) to build the docs site. Here are some concise instructions on how to maintain and update the site.
 
@@ -48,4 +48,4 @@ At some point in the future, we'll set up CI/CD to simplify the process. We'll o
 ## Similar Docs Sites
 
 * [NERSC Documentation](https://docs.nersc.gov/)
-* [UCB HPC Docs](https://docs-research-it.berkeley.edu/services/high-performance-computing/), which is also hosted on GitHub Page, but built with a different static site generator, [Jekyll](https://jekyllrb.com/)
+* [UCB HPC Docs](https://docs-research-it.berkeley.edu/services/high-performance-computing/), which is hosted on GitLab Pages (similar to GitHub Pages), but built with a different static site generator, [Jekyll](https://jekyllrb.com/)
