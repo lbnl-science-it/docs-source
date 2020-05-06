@@ -11,7 +11,7 @@ tar xvz sbt-1.3.10.tgz
 ```
 A jar file should be created at: `target/scala-2.11/LocalCluster-assembly-0.2.jar`
 
-### Upload Data in Google Cloud Storage
+### Upload Data to Google Cloud Storage
 1. Navigate to __Storage__ and select __Storage > Browser__.
 
 2. Click __Create Bucket__.
