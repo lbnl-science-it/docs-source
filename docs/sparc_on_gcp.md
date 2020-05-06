@@ -35,7 +35,7 @@ gsutil cp sample_small.seq gs://$DEVSHELL_PROJECT_ID
 
 2. Click __Submit job__.
 
-3. For __Job type__, select __Spark__ and for __Main class or jar__ and __Jar files__, specify the location of the SpaRC jar file you uploaded to your bucket. Your <bucket-name> is <your project name>: `gs://<bucket-name>/LocalCluster-assembly-0.2.jar`. 
+3. For __Job type__, select __Spark__ and for __Main class or jar__ and __Jar files__, specify the location of the SpaRC jar file you uploaded to your bucket. Your __bucket-name__ is __your project name__: `gs://<bucket-name>/LocalCluster-assembly-0.2.jar`. 
   
    For __Arguments__, enter each of these arguments separately:
    ```json
