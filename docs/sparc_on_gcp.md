@@ -6,7 +6,7 @@ Open a new __Cloud Shell__ and run:
 git clone https://github.com/shawfdong/sparc.git
 cd sparc
 wget https://piccolo.link/sbt-1.3.10.tgz
-tar xvz sbt-1.3.10.tgz
+tar xvzf sbt-1.3.10.tgz
 ./sbt/bin/sbt assembly
 ```
 A jar file should be created at: `target/scala-2.11/LocalCluster-assembly-0.2.jar`
@@ -40,15 +40,15 @@ gsutil cp sample_small.seq gs://$DEVSHELL_PROJECT_ID
    For __Arguments__, enter each of these arguments separately:
    
    ```
-       "args": [
-                "KmerCounting",
-                "--input",
-                "gs://<my-project-name>/sample_small.seq",
-                "--output",
-                "test.log",
-                "--kmer_length",
-                "31"
-         ]
+   "args": [
+            "KmerCounting",
+            "--input",
+            "gs://<my-project-name>/sample_small.seq",
+            "--output",
+            "test.log",
+            "--kmer_length",
+            "31"
+   ]
    ```
 
    For __Properties__, enter these Key-Value pairs separately: 
