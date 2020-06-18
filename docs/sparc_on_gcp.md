@@ -14,13 +14,13 @@ A jar file should be created at: `target/scala-2.11/LocalCluster-assembly-0.2.ja
 ### Upload Data to Google Cloud Storage
 1. Navigate to __Storage__ and select __Storage > Browser__.
 
-2. Click __Create Bucket__.
-`
-3. Specify __your project name__ as the __bucket name__.
+1. Click __Create Bucket__.
 
-4. Click __Create__.
+1. Specify __your project name__ as the __bucket name__.
 
-5. Copy the compiled SpaRC `LocalCluster-assembly-0.2.jar` and a sample input file `sample_small.seq` to the project bucket you just created, by running the below in Cloud Shell:
+1. Click __Create__.
+
+1. Copy the compiled SpaRC `LocalCluster-assembly-0.2.jar` and a sample input file `sample_small.seq` to the project bucket you just created, by running the below in Cloud Shell:
 
 ```shell
 gsutil cp target/scala-2.11/LocalCluster-assembly-0.2.jar gs://$DEVSHELL_PROJECT_ID
@@ -33,13 +33,13 @@ gsutil cp sample_small.seq gs://$DEVSHELL_PROJECT_ID
 ### Run SpaRC job on Dataproc
 1. In the __Dataproc__ console, click __Jobs__.
 
-2. Click __Submit job__.
+1. Click __Submit job__.
 
-3. For __Job type__, select __Spark__; for __Main class or jar__ and __Jar files__, specify the location of the SpaRC jar file you uploaded to your bucket. Your __bucket-name__ is __your project name__: `gs://<my-project-name>/LocalCluster-assembly-0.2.jar`. 
+1. For __Job type__, select __Spark__; for __Main class or jar__ and __Jar files__, specify the location of the SpaRC jar file you uploaded to your bucket. Your __bucket-name__ is __your project name__: `gs://<my-project-name>/LocalCluster-assembly-0.2.jar`. 
   
    For __Arguments__, enter each of these arguments separately:
    
-   ```
+```
    "args": [
             "KmerCounting",
             "--input",
@@ -49,11 +49,11 @@ gsutil cp sample_small.seq gs://$DEVSHELL_PROJECT_ID
             "--kmer_length",
             "31"
    ]
-   ```
+```
 
    For __Properties__, enter these Key-Value pairs separately: 
    
-    ```
+```
     "properties": {
       "spark.executor.extraClassPath": "gs://<my-project-name>/LocalCluster-assembly-0.2.jar",
       "spark.driver.maxResultSize": "8g",
@@ -61,6 +61,6 @@ gsutil cp sample_small.seq gs://$DEVSHELL_PROJECT_ID
       "spark.default.parallelism": "4",
       "spark.eventLog.enabled": "false"
     }
-    ```
+```
  
- 4. Click __Submit__
+ 1. Click __Submit__
