@@ -22,5 +22,3 @@ Currently there are over 125 people at LBNL with cloud accounts on AWS and GCP. 
 
 
 To set up a cloud account on either AWS or GCP, please send email to [scienceit@lbl.gov](mailto:scienceit@lbl.gov) to start the process.
-
-hi
