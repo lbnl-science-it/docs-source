@@ -32,3 +32,8 @@ nav:
     - Tutorials:
         - "SpaRC on Lawrencium": sparc_on_lawrencium.md
         - "SpaRC on GCP": sparc_on_gcp.md
+        - "Start Jupyter Notebook on a GPU node on Lawrencium":
+            - "TensorFlow 1.12": jupyter_gpu.md
+            - "TensorFlow 2.0": jupyter_gpu_tensorflow_2.0.md
+            - "TensorFlow 2.1": jupyter_gpu_tensorflow_2.1.md
+            - "JupyterHub": jupyterhub_gpu.md
