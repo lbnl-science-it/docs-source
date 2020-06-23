@@ -1,7 +1,7 @@
 ## [Text Classification Using AWS Deep Learning Docker Containers](https://github.com/lbnl-science-it/singularity_aws_dl_container/blob/master/singularity_docker.ipynb)  
 
 ## Outline
-1) Building the Singularity container using available AWS Deep-Learning docker containers
+1) Build the Singularity container using available AWS Deep-Learning docker containers
 
 2) Local Test
 
@@ -11,7 +11,7 @@
    * Run the Singularity image on compute nodes
 
 
-## Building the Singularity container using available AWS Deep-Learning docker containers 
+## Build the Singularity container using available AWS Deep-Learning docker containers 
 * [AWS Deep-Learning images](https://aws.amazon.com/releasenotes/available-deep-learning-containers-images/)
 
 The following shell code shows how to build the container image using `docker` and convert the container image to a `Singularity` image. 
@@ -122,7 +122,7 @@ sudo singularity build ${sifname} docker-daemon:${fullname}
     [34mINFO:   [0m Build complete: local_sagemaker-keras-text-classification.sif
 
 
-### Training Text Classifier
+### Train Text Classifier
 
 
 ```sh
