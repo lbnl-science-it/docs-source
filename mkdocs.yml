@@ -32,6 +32,8 @@ nav:
     - Tutorials:
         - "SpaRC on Lawrencium": sparc_on_lawrencium.md
         - "SpaRC on GCP": sparc_on_gcp.md
+        - "Container 101 on Lawrencium": container-101.md
+        - "Build Singularity container using AWS DL docker images": singularity_docker.md 
         - "Start Jupyter Notebook on a GPU node on Lawrencium":
             - "TensorFlow 1.12": jupyter_gpu.md
             - "TensorFlow 2.0": jupyter_gpu_tensorflow_2.0.md
