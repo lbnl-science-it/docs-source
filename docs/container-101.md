@@ -283,7 +283,7 @@ singularity exec mycontainer.sif cat /etc/os-release
 singularity run --nv -B /global/home/users/$USER:/tmp pytorch_19_12_py3.sif ls /tmp
 ```
 
-## Run GPU and MPI Containers
+## Run GPU Containers
 
 - Singularity supports NVIDIA’s CUDA GPU compute framework or AMD’s ROCm solution
 - --nv enables NVIDIA GPU support in Singularity
