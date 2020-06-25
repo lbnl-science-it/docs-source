@@ -1,6 +1,21 @@
 ## [Text Classification Using AWS Deep Learning Docker Containers](https://github.com/lbnl-science-it/singularity_aws_dl_container/blob/master/singularity_docker.ipynb)  
 
-## Outline
+## Overview
+In this tutorial, we will build a Singularity container using one of available [AWS Deep-Learning docker images](https://aws.amazon.com/releasenotes/available-deep-learning-containers-images/), and run the Singularity container on Lawrencium CPU and GPU nodes, to train an NLP model (based on Keras & TensorFlow). The NLP model will classify news articles into the appropriate news category given the training data from UCI News Dataset which contains a list of about 420K articles and their appropriate categories (labels). There are four categories:
+
+* Business (b)
+* Science & Technology (t)
+* Entertainment (e)
+* Health & Medicine (m)
+
+
+## Prerequisites:
+1. #### [AWS CLI version 1](https://docs.aws.amazon.com/cli/latest/userguide/install-linux.html)
+1. #### [Docker](https://docs.docker.com/engine/install)
+1. #### [Singularity](https://sylabs.io/guides/3.5/user-guide)
+
+
+## Objectives
 1) Build the Singularity container using available AWS Deep-Learning docker containers
 
 2) Local Test
@@ -10,6 +25,7 @@
    * Upload the Singularity containers and training data
    * Run the Singularity container on __CPU__ nodes
    * Run the Singularity container on __GPU__ nodes
+   * CPU vs GPU
 
 
 ## Build the Singularity container using available AWS Deep-Learning docker containers 
@@ -209,91 +225,9 @@ news_dataset = pd.read_csv(os.path.join('./data', 'newsCorpora.csv'), names=colu
 news_dataset.head()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>TITLE</th>
-      <th>URL</th>
-      <th>PUBLISHER</th>
-      <th>CATEGORY</th>
-      <th>STORY</th>
-      <th>HOSTNAME</th>
-      <th>TIMESTAMP</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>Fed official says weak data caused by weather,...</td>
-      <td>http://www.latimes.com/business/money/la-fi-mo...</td>
-      <td>Los Angeles Times</td>
-      <td>b</td>
-      <td>ddUyU0VZz0BRneMioxUPQVP6sIxvM</td>
-      <td>www.latimes.com</td>
-      <td>1394470370698</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Fed's Charles Plosser sees high bar for change...</td>
-      <td>http://www.livemint.com/Politics/H2EvwJSK2VE6O...</td>
-      <td>Livemint</td>
-      <td>b</td>
-      <td>ddUyU0VZz0BRneMioxUPQVP6sIxvM</td>
-      <td>www.livemint.com</td>
-      <td>1394470371207</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>US open: Stocks fall after Fed official hints ...</td>
-      <td>http://www.ifamagazine.com/news/us-open-stocks...</td>
-      <td>IFA Magazine</td>
-      <td>b</td>
-      <td>ddUyU0VZz0BRneMioxUPQVP6sIxvM</td>
-      <td>www.ifamagazine.com</td>
-      <td>1394470371550</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Fed risks falling 'behind the curve', Charles ...</td>
-      <td>http://www.ifamagazine.com/news/fed-risks-fall...</td>
-      <td>IFA Magazine</td>
-      <td>b</td>
-      <td>ddUyU0VZz0BRneMioxUPQVP6sIxvM</td>
-      <td>www.ifamagazine.com</td>
-      <td>1394470371793</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Fed's Plosser: Nasty Weather Has Curbed Job Gr...</td>
-      <td>http://www.moneynews.com/Economy/federal-reser...</td>
-      <td>Moneynews</td>
-      <td>b</td>
-      <td>ddUyU0VZz0BRneMioxUPQVP6sIxvM</td>
-      <td>www.moneynews.com</td>
-      <td>1394470372027</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+| TITLE | URL | PUBLISHER | CATEGORY | STORY | HOSTNAME | TIMESTAMP |
+| ---   | --- | ---       | ---      |  ---  |  ---     |  ---      |
+|Fed official says weak data caused by weather,...|http://www.latimes.com/business/money/la-fi-mo...|Los Angeles Times|b|ddUyU0VZz0BRneMioxUPQVP6sIxvM|www.latimes.com|1394470370698|
 
 
 
@@ -322,7 +256,7 @@ news_dataset.groupby(['CATEGORY']).size()
 ```
 
 ## Train text classifier on Lawrencium
-  * Upload the Singularity containers and training data
+  * ### Upload the Singularity containers and training data
 ```shell
     sftp lrc-xfer.lbl.gov
     put local_sagemaker-keras-text-classification.sif
@@ -330,7 +264,7 @@ news_dataset.groupby(['CATEGORY']).size()
     put -r local_test
 ```
 
-  * Run the Singularity container on Lawrencium __CPU__ node
+  * ### Run the Singularity container on Lawrencium __CPU__ node
 ```shell
     ssh lrc-login.lbl.gov
     cd local_test
@@ -338,7 +272,7 @@ news_dataset.groupby(['CATEGORY']).size()
     sh train_local.sh ../local_sagemaker-keras-text-classification.sif
 ```
 
-  * Run the Singularity container on Lawrencium __GPU__ node
+  * ### Run the Singularity container on Lawrencium __GPU__ node
 ```shell
     ssh lrc-login.lbl.gov
     cd local_test
@@ -435,9 +369,13 @@ Predicted category:  t
 
 ```
 
+* ### CPU vs GPU
+In this tutorial we trained the same NLP model on Lawrencium nodes with and without GPU; the training took about __17s__ per epoch (337933 samples) on GPU node, and __23s__ per epoch on CPU node.
 
 ## References 
 1. https://aws.amazon.com/releasenotes/available-deep-learning-containers-images
 1. https://github.com/aws-samples/amazon-sagemaker-keras-text-classification
 1. https://github.com/lbnl-science-it/aws-sagemaker-keras-text-classification
 1. https://sylabs.io/guides/3.5/user-guide/
+1. https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket
+1. https://docs.aws.amazon.com/cli/latest/userguide/install-linux.html

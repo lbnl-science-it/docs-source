@@ -33,8 +33,10 @@ nav:
         - "SpaRC on Lawrencium": sparc_on_lawrencium.md
         - "SpaRC on GCP": sparc_on_gcp.md
         - "Container 101 on Lawrencium": container-101.md
-        - "Build Singularity container using AWS DL docker images": singularity_docker.md 
-        - "Start Jupyter Notebook on a GPU node on Lawrencium":
+        - "Lawrencium: Singularity container using AWS DL docker images": singularity_docker.md 
+        - "AWS SageMaker: Text Classification Using Keras & TensorFlow": sagemaker_keras_text_classification.md
+        - "AWS SageMaker: Reinforcement Learning": rl_mountain_car_coach_gymEnv.md 
+        - "Lawrencium: Jupyter Notebook on a GPU node":
             - "TensorFlow 1.12": jupyter_gpu.md
             - "TensorFlow 2.0": jupyter_gpu_tensorflow_2.0.md
             - "TensorFlow 2.1": jupyter_gpu_tensorflow_2.1.md
