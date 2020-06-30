@@ -36,6 +36,7 @@ nav:
         - "Lawrencium: Singularity container using AWS DL docker images": singularity_docker.md 
         - "AWS SageMaker: Text Classification Using Keras & TensorFlow": sagemaker_keras_text_classification.md
         - "AWS SageMaker: Reinforcement Learning": rl_mountain_car_coach_gymEnv.md 
+        - "Google Cloud TPU: BERT": tpu_bert.md
         - "Lawrencium: Jupyter Notebook on a GPU node":
             - "TensorFlow 1.12": jupyter_gpu.md
             - "TensorFlow 2.0": jupyter_gpu_tensorflow_2.0.md
