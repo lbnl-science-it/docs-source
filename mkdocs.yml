@@ -28,6 +28,7 @@ nav:
     - "Science General Support": support.md
     - "Compute Resources": compute.md
     - "Storage Resources": storage.md
+    - "Backup Resources": backup.md
     - "Cloud Resources": cloud.md
     - Tutorials:
         - "SpaRC on Lawrencium": sparc_on_lawrencium.md
