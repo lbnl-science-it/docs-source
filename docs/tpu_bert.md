@@ -259,6 +259,7 @@ No instances currently exist.
 gsutil rm -r gs://$BUCKET_NAME
 ```
 
-## References: 
-https://cloud.google.com/tpu/docs/tutorials/bert-2.x
-https://cloud.google.com/tpu/docs/quickstart
+## References
+* https://cloud.google.com/tpu/docs/tutorials/bert-2.x
+* https://cloud.google.com/tpu/docs/quickstart
+* https://github.com/tensorflow/models/tree/master/official/nlp/bert

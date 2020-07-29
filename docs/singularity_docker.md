@@ -244,6 +244,10 @@ news_dataset.groupby(['CATEGORY']).size()
 
 
 ## Local Test
+  * (OPTIONAL): to avoid the Docker daemon socket permission denied
+```shell
+  sudo chmod 666 /var/run/docker.sock
+```
   * Build Singularity container using AWS Deep-Learning Docker __CPU__ image
 ```shell
   cd container
