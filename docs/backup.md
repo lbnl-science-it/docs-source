@@ -15,7 +15,7 @@ Rclone is a command line program to manage files on cloud storage and sync files
 
 #### [Install](https://rclone.org/downloads/)
 #### [Configuration](https://rclone.org/docs/#configure)
-#### Documentation:
+#### Documentation
    * _Amazon S3_: [https://rclone.org/s3/](https://rclone.org/s3/)
    * _Google Drive_: [https://rclone.org/drive/](https://rclone.org/drive/)
    * _Google Cloud Storage_: [https://rclone.org/googlecloudstorage/](https://rclone.org/googlecloudstorage/)
